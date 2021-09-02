@@ -1,22 +1,17 @@
-import React from 'react';
+import React,{useState} from 'react';
 
 function App() {
+  const [text, setText] = useState('Hello!');
+  // let text = "Hello!!";
 
-  const onSubmit = () => {
-    alert('submitted');
-  };
-  const onKeyUp =(event) => {
-    if (event.keyCode === 13) { //enter의 키 코드가 13이다.
-      onSubmit();
-    }
-  };
-
+  const updateText = ()=> {
+    // text = "Bye~";
+    setText('Bye~');
+  }
   return (
     <div className="App">
-      <input onKeyUp={onKeyUp} />
-      <button onClick={onSubmit}>Submit</button>
-      <button onClick={()=> alert('hello')}>hello</button>
-
+      <span>{text}</span>
+      <button onClick={updateText}>Update</button>
     </div>
     );
 }
