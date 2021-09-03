@@ -12,6 +12,11 @@ const MovieForm = ({addMovie}) => {
     setMovieYear('');
   };
 
+  const resetErrors = () => {
+    setTitleError('');
+    setYearError('');
+  };
+  
   const validateForm = () => {
     resetErrors();
     let validated = true;
@@ -26,10 +31,6 @@ const MovieForm = ({addMovie}) => {
     return validated;
   };
 
-  const resetErrors = () => {
-    setTitleError('');
-    setYearError('');
-  };
   const onSubmit = (event)=> {
     event.preventDefault();
     
