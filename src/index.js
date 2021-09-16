@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
@@ -17,6 +18,17 @@ ReactDOM.render(
     </PersonContext.Provider>
   </React.StrictMode>,
   document.getElementById("root")
+=======
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import App from './App';
+import reportWebVitals from './reportWebVitals';
+
+ReactDOM.render(
+    <App />,
+  document.getElementById('root')
+>>>>>>> 34ae80f41c8ed05c63f053f47207a9c72761c302
 );
 
 // If you want to start measuring performance in your app, pass a function

@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "name": "tic-tac-toe",
+=======
+  "name": "react-basic",
+>>>>>>> 34ae80f41c8ed05c63f053f47207a9c72761c302
   "version": "0.1.0",
   "private": true,
   "dependencies": {

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import logo from "./logo.svg";
 import "./App.css";
 import UncontrolledComponent from "./components/UncontrolledComponent";
@@ -52,3 +53,45 @@ function App({ hasMounted }) {
 }
 
 export default withHasMounted(App);
+=======
+import React, { useState } from 'react';
+import Movie from './components/Movie';
+import MovieForm from './components/MovieForm';
+
+function App() {
+
+  const [movies,setMovies] = useState([]);
+
+  const removeMovie = (id) => {
+    setMovies(movies.filter(movie => {
+      return movie.id !== id;
+    }))
+  };
+  const renderMovies = movies.length ? movies.map(movie => {
+    return(
+      <Movie 
+      movie={movie}
+      key={movie.id}
+      removeMovie={removeMovie}
+      />
+    );
+  }) : '추가된 영화가 없습니다.';
+
+  const addMovie = (movie)=> {
+    setMovies([
+      ...movies,
+      movie
+    ]);
+  };
+  
+  return (
+  <div className="App">
+    <h1>Movie List</h1>
+    <MovieForm addMovie={addMovie}/>
+    {renderMovies}
+  </div>
+    );
+}
+
+export default App;
+>>>>>>> 34ae80f41c8ed05c63f053f47207a9c72761c302
